@@ -1,0 +1,23 @@
+{
+  "name": "just-currency-converter",
+  "version": "1.0.0",
+  "description": "A simple JavaScript library for converting currencies using a currency conversion API.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quchimshizunero/just-currency-converter.git"
+  },
+  "keywords": [
+    "currency",
+    "converter",
+    "exchange"
+  ],
+  "author": "Quchimshizunero",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
