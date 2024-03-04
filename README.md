@@ -1,27 +1,38 @@
-# Currency Predictor
+# JustCurrencyConverter
 
-Currency Predictor is a fun JavaScript module that predicts future currency rates using a humorous approach.
+JustCurrencyConverter is a simple JavaScript library for converting currencies using a currency conversion API.
 
 ## Installation
 
-To install Currency Predictor, simply copy the `currencyPredictor.js` file into your project.
+To install JustCurrencyConverter, you can use npm:
+
+```bash
+npm install just-currency-converter
+```
 
 ## Usage
 
 ```javascript
-const { predictFutureRate } = require('./currencyPredictor');
+const JustCurrencyConverter = require('just-currency-converter');
 
-// Usage example: Predict future currency rates
-predictFutureRate('USD', 'EUR', 7)
-  .then(prediction => console.log(prediction))
-  .catch(error => console.error(error.message));
+// Initialize the converter with your API key
+const converter = new JustCurrencyConverter('YOUR_API_KEY');
+
+// Convert currency
+converter.convert(100, 'USD', 'EUR')
+  .then(result => {
+    console.log(`Converted amount: ${result}`);
+  })
+  .catch(error => {
+    console.error(`Conversion failed: ${error.message}`);
+  });
 ```
 
-Replace `'./currencyPredictor'` with the actual path to the `currencyPredictor.js` file in your project.
+Replace `'YOUR_API_KEY'` with your actual API key for the currency conversion service you're using.
 
-## Disclaimer
+## API Key
 
-This predictor is for entertainment purposes only and should not be used for making financial decisions. The predictions are random and have no real sense.
+You can obtain an API key from the currency conversion service provider. Make sure to keep your API key secure and do not expose it publicly.
 
 ## License
 
